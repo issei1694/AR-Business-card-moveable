@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AR-GROOVENEXUS</AR-GROOVENEXU></title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="./asset/img/favicon.ico" sizes="any" />
+
+    <!-- Load A-Frame -->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+    <!-- Load AR.js -->
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
+
+    <!-- Load A-Frame Extras -->
+    <script src="https://unpkg.com/aframe-extras@6.1.1/dist/aframe-extras.min.js"></script>
+
+    <!-- Draco Loader -->
+    <script src="https://www.gstatic.com/draco/v1/decoders/draco_decoder.js"></script>
+  </head>
+
+  <body style="margin: 0; overflow: hidden;">
+    <!-- Buffer page -->
+    <div id="loading-screen">Loading, please wait...</div>
+
+    <a-scene
+      embedded
+      arjs="patternRatio:0.90"
+      vr-mode-ui="enabled: false"
+      id="scene"
+    >
+      <a-assets>
+        <video id="hm-video-2" preload="auto"></video>
+        <a-asset-item id="imdbLogo" src="./video/imdb.glb" preload="auto"></a-asset-item>
+        <a-asset-item id="gntuneLogo" src="./video/kv.glb" preload="auto"></a-asset-item>
+        <a-asset-item id="spotifyLogo" src="./video/spotify_logo.glb" preload="auto"></a-asset-item>
+        <a-asset-item id="instagramLogo" src="./image/instagram_3d-icon.glb" preload="auto"></a-asset-item>
+        <a-asset-item id="bowser" src="./video/model-left-to-right.glb" preload="auto"></a-asset-item>
+        <img id="qrcode" src="./new-marker/new-qr/file/pattern-qr_code.png" />
+      </a-assets>
+
+
+      
+      <!-- New Marker 7 -->
+      <a-marker
+      type="pattern"
+      url="./new-marker/new-qr/pattern3333.patt"
+      single-display
+    >
+    <a-video
+    id="hm"
+    src="#hm-video-2"
+    width="4.5"
+    height="2.55"
+    position="-1 -1 -2.2"
+    rotation="-90 0 0"
+    class="clickable"
+    play-video
+  ></a-video>
+
+  <a-plane
+    position="-1.1 -0.9 0.5"
+    rotation="-90 0 0"
+    width="4.4"
+    height="2.55"
+    color="rgba(0, 0, 0, 0.5)" 
+  >
+    <a-text
+      value="DJ HIMANSHU MISHRA"
+      align="left"
+      color="white"
+      position="-2 -0.3 0.3"
+      scale="1 1 1"
+    ></a-text>
+    <a-text
+      value="Founder - GrooveNexus"
+      align="left"
+      color="white"
+      position="-2 -0.6 0.3"
+      scale="1 1 1"
+    ></a-text>
+    <a-image
+      src="#qrcode"
+      width="1.3"
+      height="1.3"
+      position="1.3 0.5 0.3"
+      rotation="0 0 0"
+    ></a-image>
+  </a-plane>
+  
+  <a-entity
+    id="avatar"
+    gltf-model="#bowser"
+    position="1.6 0 1.8"
+    rotation="-90 0 0"
+    scale="2 2 2"
+    animation-mixer
+  ></a-entity>
+
+  <a-entity
+    gltf-model="#imdbLogo"
+    position="0.9 -0.65 2.5"
+    rotation="0 0 0"
+    scale="10 10 10"
+    class="clickable"
+    link-out="url: https://www.imdb.com/name/nm14115341/"
+  ></a-entity>
+  <a-entity
+    gltf-model="#spotifyLogo"
+    position="-0.3 -0.65 2.5"
+    rotation="0 -90 0"
+    scale="0.5 0.5 0.5"
+    class="clickable"
+    link-out="url: https://open.spotify.com/artist/1UI8TqDajrGyDZA3SGjaR0"
+  ></a-entity>
+  <a-entity
+    gltf-model="#gntuneLogo"
+    position="-2.8 -0.9 2.3"
+    rotation="0 0 0"
+    scale="7 7 7"
+    class="clickable"
+    link-out="url: https://gntunes.com/djhimanshumishra"
+  ></a-entity>
+  <a-entity
+    gltf-model="#instagramLogo"
+    position="-3.1 -0.2 2.4"
+    rotation="0 -90 90"
+    scale="0.5 0.5 0.5"
+    class="clickable"
+    link-out="url: https://www.instagram.com/djhimanshumishra/"
+  ></a-entity>
+</a-marker>  
+
+
+      <!-- Marker 5 -->
+      <a-marker
+        type="pattern"
+        url="./new-marker/new-qr/pattern-qr_code1111.patt"
+        single-display
+      >
+        <a-video
+          id="hm"
+          src="#hm-video-2"
+          width="4.5"
+          height="2.55"
+          position="-1 -1 -2.2"
+          rotation="-90 0 0"
+          class="clickable"
+          play-video
+        ></a-video>
+
+        <a-plane
+          position="-1.1 -0.9 0.5"
+          rotation="-90 0 0"
+          width="4.4"
+          height="2.55"
+          color="rgba(0, 0, 0, 0.5)" 
+        >
+          <a-text
+            value="DJ HIMANSHU MISHRA"
+            align="left"
+            color="white"
+            position="-2 -0.3 0.3"
+            scale="1 1 1"
+          ></a-text>
+          <a-text
+            value="Founder - GrooveNexus"
+            align="left"
+            color="white"
+            position="-2 -0.6 0.3"
+            scale="1 1 1"
+          ></a-text>
+          <a-image
+            src="#qrcode"
+            width="1.3"
+            height="1.3"
+            position="1.3 0.5 0.3"
+            rotation="0 0 0"
+          ></a-image>
+        </a-plane>
+        
+        <a-entity
+          id="avatar"
+          gltf-model="#bowser"
+          position="1.6 0 1.8"
+          rotation="-90 0 0"
+          scale="2 2 2"
+          animation-mixer
+        ></a-entity>
+
+        <a-entity
+          gltf-model="#imdbLogo"
+          position="0.9 -0.65 2.5"
+          rotation="0 0 0"
+          scale="10 10 10"
+          class="clickable"
+          link-out="url: https://www.imdb.com/name/nm14115341/"
+        ></a-entity>
+        <a-entity
+          gltf-model="#spotifyLogo"
+          position="-0.3 -0.65 2.5"
+          rotation="0 -90 0"
+          scale="0.5 0.5 0.5"
+          class="clickable"
+          link-out="url: https://open.spotify.com/artist/1UI8TqDajrGyDZA3SGjaR0"
+        ></a-entity>
+        <a-entity
+          gltf-model="#gntuneLogo"
+          position="-2.8 -0.9 2.3"
+          rotation="0 0 0"
+          scale="7 7 7"
+          class="clickable"
+          link-out="url: https://gntunes.com/djhimanshumishra"
+        ></a-entity>
+        <a-entity
+          gltf-model="#instagramLogo"
+          position="-3.1 -0.2 2.4"
+          rotation="0 -90 90"
+          scale="0.5 0.5 0.5"
+          class="clickable"
+          link-out="url: https://www.instagram.com/djhimanshumishra/"
+        ></a-entity>
+      </a-marker>
+
+          <!-- New Marker 6-->
+          <a-marker
+            type="pattern"
+            url="./new-marker/new-qr/pattern2222.patt"
+            single-display
+          >
+            
+          <a-video
+          id="hm"
+          src="#hm-video-2"
+          width="4.5"
+          height="2.55"
+          position="-1 -1 -2.2"
+          rotation="-90 0 0"
+          class="clickable"
+          play-video
+        ></a-video>
+
+        <a-plane
+          position="-1.1 -0.9 0.5"
+          rotation="-90 0 0"
+          width="4.4"
+          height="2.55"
+          color="rgba(0, 0, 0, 0.5)" 
+        >
+          <a-text
+            value="DJ HIMANSHU MISHRA"
+            align="left"
+            color="white"
+            position="-2 -0.3 0.3"
+            scale="1 1 1"
+          ></a-text>
+          <a-text
+            value="Founder - GrooveNexus"
+            align="left"
+            color="white"
+            position="-2 -0.6 0.3"
+            scale="1 1 1"
+          ></a-text>
+          <a-image
+            src="#qrcode"
+            width="1.3"
+            height="1.3"
+            position="1.3 0.5 0.3"
+            rotation="0 0 0"
+          ></a-image>
+        </a-plane>
+        
+        <a-entity
+          id="avatar"
+          gltf-model="#bowser"
+          position="1.6 0 1.8"
+          rotation="-90 0 0"
+          scale="2 2 2"
+          animation-mixer
+        ></a-entity>
+
+        <a-entity
+          gltf-model="#imdbLogo"
+          position="0.9 -0.65 2.5"
+          rotation="0 0 0"
+          scale="10 10 10"
+          class="clickable"
+          link-out="url: https://www.imdb.com/name/nm14115341/"
+        ></a-entity>
+        <a-entity
+          gltf-model="#spotifyLogo"
+          position="-0.3 -0.65 2.5"
+          rotation="0 -90 0"
+          scale="0.5 0.5 0.5"
+          class="clickable"
+          link-out="url: https://open.spotify.com/artist/1UI8TqDajrGyDZA3SGjaR0"
+        ></a-entity>
+        <a-entity
+          gltf-model="#gntuneLogo"
+          position="-2.8 -0.9 2.3"
+          rotation="0 0 0"
+          scale="7 7 7"
+          class="clickable"
+          link-out="url: https://gntunes.com/djhimanshumishra"
+        ></a-entity>
+        <a-entity
+          gltf-model="#instagramLogo"
+          position="-3.1 -0.2 2.4"
+          rotation="0 -90 90"
+          scale="0.5 0.5 0.5"
+          class="clickable"
+          link-out="url: https://www.instagram.com/djhimanshumishra/"
+        ></a-entity>
+      </a-marker> 
+
+
+
+
+      <a-entity id="cursor2" camera>
+        <a-cursor id="cursor1"></a-cursor>
+      </a-entity>
+    </a-scene>
+
+    <!-- Buffer page styles -->
+    <style>
+      #loading-screen {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+    </style>
+
+   
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Register custom A-Frame components
+            AFRAME.registerComponent("link-out", {
+                schema: {
+                    url: { type: "string" },
+                },
+                init: function () {
+                    this.el.addEventListener("click", () => {
+                        window.open(this.data.url, "_blank");
+                    });
+    
+                    this.el.addEventListener("touchstart", () => {
+                        window.open(this.data.url, "_blank");
+                    });
+                },
+            });
+    
+            AFRAME.registerComponent("play-video", {
+                init: function () {
+                    const videoElement = document.querySelector(this.el.getAttribute("src"));
+                    const marker = this.el.parentNode;
+    
+                    marker.addEventListener("markerFound", function () {
+                        videoElement.play();
+                    });
+    
+                    this.el.addEventListener("click", function () {
+                        if (videoElement.paused) {
+                            videoElement.play();
+                        } else {
+                            videoElement.pause();
+                        }
+                    });
+    
+                    this.el.addEventListener("touchstart", function () {
+                        if (videoElement.paused) {
+                            videoElement.play();
+                        } else {
+                            videoElement.pause();
+                        }
+                    });
+                },
+            });
+    
+            AFRAME.registerComponent("single-display", {
+                init: function () {
+                    const marker = this.el;
+                    const lastPosition = new THREE.Vector3();
+                    const lastRotation = new THREE.Euler();
+                    const lastScale = new THREE.Vector3();
+    
+                    marker.addEventListener("markerFound", function () {
+                        hideAllModels();
+                        marker.object3D.visible = true;
+    
+                        // Update the model's position, rotation, and scale when the marker is found
+                        marker.object3D.position.copy(lastPosition);
+                        marker.object3D.rotation.copy(lastRotation);
+                        marker.object3D.scale.copy(lastScale);
+                    });
+    
+                    marker.addEventListener("markerLost", function () {
+                        // Store the last known position, rotation, and scale
+                        lastPosition.copy(marker.object3D.position);
+                        lastRotation.copy(marker.object3D.rotation);
+                        lastScale.copy(marker.object3D.scale);
+    
+                        // Keep the model visible at the last known position
+                        marker.object3D.visible = true;
+                    });
+                },
+            });
+    
+            function hideAllModels() {
+                const markers = document.querySelectorAll("a-marker");
+                markers.forEach(function (marker) {
+                    marker.object3D.visible = false;
+                });
+            }
+    
+            document.querySelector('a-entity[camera]').setAttribute('mouse-cursor', '');
+    
+            window.addEventListener("load", function () {
+                const sceneEl = document.querySelector("#scene");
+                sceneEl.addEventListener("loaded", function () {
+                    document.getElementById("loading-screen").style.display = "none";
+                });
+            });
+        });
+    
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                fetch('./video/hm-intro-video_(1).mp4')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.blob();
+                    })
+                    .then(blob => {
+                        const videoElement = document.getElementById('hm-video-2');
+                        const url = URL.createObjectURL(blob);
+                        videoElement.src = url;
+                        videoElement.load();
+                    })
+                    .catch(error => {
+                        console.error('There has been a problem with your fetch operation:', error);
+                    });
+            }, 1000); // 1 second delay
+        });
+    
+        // Fetch and load marker patterns dynamically
+      function loadMarkerPattern(markerId, patternUrl) {
+        fetch(patternUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Marker pattern not found');
+                }
+                return response.text();
+            })
+            .then(patternData => {
+                // Assuming marker ID is in the format 'marker-id'
+                const marker = document.querySelector(`#${markerId}`);
+                if (marker) {
+                    marker.setAttribute('url', patternUrl);
+                }
+            })
+            .catch(error => {
+                console.error(`There has been a problem with loading marker pattern (${markerId}):`, error);
+            });
+    }
+
+    // Load marker patterns on demand
+    function onMarkerVisible(markerId, patternUrl) {
+        const marker = document.querySelector(`#${markerId}`);
+        if (marker && marker.object3D.visible) {
+            loadMarkerPattern(markerId, patternUrl);
+        }
+    }
+
+    // Event listeners for markers to fetch patterns
+    const marker5PatternUrl = './new-marker/new-qr/pattern-qr_code1111.patt';
+    const marker6PatternUrl = './new-marker/new-qr/pattern2222.patt';
+    const marker7PatternUrl = './new-marker/new-qr/pattern3333.patt';
+
+    document.querySelectorAll('a-marker').forEach(marker => {
+        marker.addEventListener('markerFound', () => {
+            const markerId = marker.id;
+            if (markerId === 'marker5') {
+                onMarkerVisible(markerId, marker5PatternUrl);
+            } else if (markerId === 'marker6') {
+                onMarkerVisible(markerId, marker6PatternUrl);
+            } else if (markerId === 'marker7') {
+                onMarkerVisible(markerId, marker7PatternUrl);
+            }
+        });
+    });
+
+       
+        // Update cursor position for mouse movement
+        document.addEventListener('mousemove', (event) => {
+          const cursor = document.getElementById('cursor2');
+          const scene = document.querySelector('a-scene');
+          const rect = scene.getBoundingClientRect();
+  
+          // Adjust the calculations to move in the direction of the mouse
+          const x = -((event.clientX / rect.width) * 2.2 - 1) * 8;
+          const y = -((event.clientY / rect.height) * 3.1 - 1) * -8;
+          const z = -1; 
+          cursor.setAttribute('position', `${x} ${y} -1`);
+      });
+  
+      // Update cursor position for touch movement
+      document.addEventListener('touchmove', (event) => {
+          const cursor = document.getElementById('cursor2');
+          const scene = document.querySelector('a-scene');
+          const touch = event.touches[0];
+          const rect = scene.getBoundingClientRect();
+  
+          // Adjust the calculations to move in the direction of the touch
+          const x = -((touch.clientX / rect.width) * 4 - 1) * 8;
+          const y = -((touch.clientY / rect.height) * 2.5 - 1) * -8;
+          const z = -1; 
+          cursor.setAttribute('position', `${x} ${y} -1`);
+      });
+
+    </script>
+  </body>
+</html>
